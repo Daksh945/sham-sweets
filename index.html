@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sham's Sweets & Namkeen | Mansa, Punjab (Est. 1988)</title>
+  <meta name="description" content="Sham's Sweets & Namkeen in Mansa, Punjab. Serving traditional sweets, namkeens, chutneys, and hot snacks & chaat since 1988. Visit Old Court Road or Chakerian Phatak." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-cream: #FFFBF2;
+      --bg-warm: #FDF3E1;
+      --surface: #FFFFFF;
+      --maroon: #6B1420;
+      --maroon-dark: #4A0C15;
+      --saffron: #D97706;
+      --saffron-light: #FEF3C7;
+      --gold: #C68B2C;
+      --text-dark: #2A1B18;
+      --text-muted: #66524C;
+      --border: #EEDCC3;
+      --success: #15803D;
+      --shadow: 0 10px 30px rgba(74, 12, 21, 0.08);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: var(--maroon-dark);
+      color: #FCE9C8;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 8px 16px;
+      letter-spacing: 0.2px;
+    }
+    .top-bar strong {
+      color: #FBBF24;
+    }
+
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 251, 242, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--maroon), var(--saffron));
+      color: #FFFBF2;
+      display: grid;
+      place-items: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 12px rgba(107, 20, 32, 0.25);
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 1.25rem;
+      color: var(--maroon);
+      line-height: 1.15;
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      color: var(--saffron);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--maroon);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background: var(--maroon);
+      color: #FFFBF2;
+      box-shadow: 0 6px 16px rgba(107, 20, 32, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--maroon-dark);
+    }
+
+    .btn-secondary {
+      background: var(--saffron-light);
+      color: var(--maroon-dark);
+      border: 1px solid #F5D08A;
+    }
+
+    .btn-secondary:hover {
+      background: #FDE68A;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--maroon);
+      border: 1.5px solid var(--maroon);
+    }
+
+    .btn-outline:hover {
+      background: var(--maroon);
+      color: #FFF;
+    }
+
+    .cart-pill {
+      position: relative;
+      background: var(--saffron);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cart-count {
+      background: var(--maroon-dark);
+      color: #fff;
+      font-size: 0.75rem;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      padding: 0 5px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--maroon);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at top right, #FDECC8 0%, var(--bg-cream) 58%);
+      padding: 64px 20px 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .heritage-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--saffron-light);
+      color: var(--maroon);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid #F3D192;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+      color: var(--maroon-dark);
+      line-height: 1.14;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 em {
+      color: var(--saffron);
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 1.06rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--maroon);
+    }
+
+    .stat span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Hero Showcase Card */
+    .hero-visual {
+      background: var(--maroon);
+      color: #FFFBF2;
+      border-radius: 22px;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 22px 45px rgba(74, 12, 21, 0.2);
+      border: 2px solid var(--gold);
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px dashed rgba(251, 191, 36, 0.4);
+      border-radius: 14px;
+      pointer-events: none;
+    }
+
+    .visual-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .visual-header span {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #FCD34D;
+      font-weight: 700;
+    }
+
+    .signature-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .signature-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .sig-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sig-icon {
+      font-size: 1.5rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(251, 191, 36, 0.18);
+      display: grid;
+      place-items: center;
+    }
+
+    .sig-left h4 {
+      font-size: 0.98rem;
+      color: #FFF;
+    }
+
+    .sig-left small {
+      color: #F3D9B1;
+      font-size: 0.8rem;
+    }
+
+    .sig-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: #FBBF24;
+      color: var(--maroon-dark);
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    /* Sections General */
+    section {
+      padding: 72px 20px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto 44px;
+    }
+
+    .section-kicker {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: var(--saffron);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.85rem, 3vw, 2.5rem);
+      color: var(--maroon-dark);
+      margin-bottom: 10px;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+    }
+
+    /* Menu Section */
+    .menu-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 34px;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: var(--maroon);
+      color: #FFF;
+      border-color: var(--maroon);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .menu-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .menu-emoji {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .cat-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--bg-warm);
+      color: var(--maroon);
+      border: 1px solid var(--border);
+    }
+
+    .menu-card h3 {
+      font-size: 1.2rem;
+      color: var(--maroon-dark);
+      margin-bottom: 6px;
+    }
+
+    .menu-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .menu-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .veg-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--success);
+    }
+
+    .veg-square {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--success);
+      border-radius: 3px;
+      display: grid;
+      place-items: center;
+    }
+
+    .veg-square::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--success);
+    }
+
+    .add-btn {
+      background: var(--saffron-light);
+      color: var(--maroon-dark);
+      border: 1px solid #F5CE82;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .add-btn:hover {
+      background: var(--saffron);
+      color: #FFF;
+      border-color: var(--saffron);
+    }
+
+    /* Services & Payments Band */
+    .services-section {
+      background: var(--bg-warm);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+
+    .service-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+    }
+
+    .service-box .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .service-box h3 {
+      font-size: 1.1rem;
+      color: var(--maroon-dark);
+      margin-bottom: 6px;
+    }
+
+    .service-box p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .payment-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .payment-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pay-pill {
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--maroon-dark);
+    }
+
+    /* Story / Heritage Section */
+    .story-box {
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+      color: #FFFBF2;
+      border-radius: 22px;
+      padding: 44px 36px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .story-box h2 {
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      margin-bottom: 14px;
+      color: #FDE68A;
+    }
+
+    .story-box p {
+      color: #F6E6D5;
+      margin-bottom: 14px;
+    }
+
+    .story-highlights {
+      display: grid;
+      gap: 12px;
+    }
+
+    .story-point {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+    }
+
+    .story-point strong {
+      color: #FBBF24;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Outlets Section */
+    .outlets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 24px;
+    }
+
+    .outlet-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .outlet-label {
+      display: inline-block;
+      background: var(--saffron-light);
+      color: var(--maroon);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .outlet-card h3 {
+      font-size: 1.4rem;
+      color: var(--maroon-dark);
+      margin-bottom: 14px;
+    }
+
+    .outlet-info {
+      display: grid;
+      gap: 12px;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .info-row strong {
+      color: var(--text-dark);
+    }
+
+    .outlet-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 8px;
+    }
+
+    /* Order Drawer Modal */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(42, 27, 24, 0.55);
+      z-index: 200;
+      display: none;
+      justify-content: flex-end;
+    }
+
+    .drawer-backdrop.open {
+      display: flex;
+    }
+
+    .drawer {
+      width: 100%;
+      max-width: 420px;
+      background: var(--bg-cream);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .drawer-head {
+      padding: 20px;
+      background: var(--maroon);
+      color: #FFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-drawer {
+      background: rgba(255, 255, 255, 0.16);
+      color: #FFF;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .drawer-body {
+      padding: 20px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .cart-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg-warm);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .drawer-foot {
+      padding: 18px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--maroon-dark);
+    }
+
+    .field select,
+    .field input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--maroon-dark);
+      color: #EED9BE;
+      padding: 46px 20px 24px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: 0 auto 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+    }
+
+    footer h4 {
+      color: #FBBF24;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+
+    footer p, footer li {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      list-style: none;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.83rem;
+      color: #CBB398;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--maroon-dark);
+      color: #FFF;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s ease;
+      z-index: 300;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .story-box {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-cream);
+        flex-direction: column;
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--border);
+        gap: 14px;
+      }
+      nav.open {
+        display: flex;
+      }
+      .menu-toggle {
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    Serving Mansa Since <strong>1988</strong> • Open Daily at <strong>Old Court Road</strong> (9 AM – 9 PM) & <strong>Chakerian Phatak</strong> (8 AM – 8:30 PM)
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#top" class="brand">
+        <div class="brand-badge">S</div>
+        <div class="brand-text">
+          <h1>Sham's Sweets & Namkeen</h1>
+          <span>Est. 1988 • Mansa, Punjab</span>
+        </div>
+      </a>
+
+      <nav id="mainNav">
+        <a href="#menu">Menu</a>
+        <a href="#services">Services</a>
+        <a href="#heritage">Our Story</a>
+        <a href="#outlets">Outlets</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-pill" id="openDrawerBtn" aria-label="Open order list">
+          🛍️ Inquiry List <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <div class="heritage-tag">✨ Trusted Tradition Since 1988 • Mansa, Punjab</div>
+        <h2>Authentic Mithai, Crispy Namkeen &amp; <em>Hot Street Chaat</em></h2>
+        <p>
+          From melt-in-the-mouth Milk Cake and Kaju Katli to piping hot Samosas, Bhature-Chole, and tangy Golgappe—Sham's Sweets & Namkeen brings generations of authentic Punjabi flavor to your table.
+        </p>
+        <div class="hero-cta">
+          <a href="#menu" class="btn btn-primary">Explore Full Menu</a>
+          <a href="#outlets" class="btn btn-secondary">📍 Find Nearest Outlet</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>1988</strong>
+            <span>Year Established</span>
+          </div>
+          <div class="stat">
+            <strong>2 Outlets</strong>
+            <span>Old Court Rd &amp; Chakerian</span>
+          </div>
+          <div class="stat">
+            <strong>100% Pure</strong>
+            <span>Freshly Prepared Daily</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-header">
+          <span>Today's Fresh Favorites</span>
+          <span>100% Veg</span>
+        </div>
+        <div class="signature-list">
+          <div class="signature-item">
+            <div class="sig-left">
+              <div class="sig-icon">🍮</div>
+              <div>
+                <h4>Traditional Milk Cake &amp; Burfi</h4>
+                <small>Slow-cooked rich mithai</small>
+              </div>
+            </div>
+            <span class="sig-tag">Bestseller</span>
+          </div>
+          <div class="signature-item">
+            <div class="sig-left">
+              <div class="sig-icon">🥨</div>
+              <div>
+                <h4>Hot Jalebi &amp; Gulab Jamun</h4>
+                <small>Crispy, syrupy &amp; festive</small>
+              </div>
+            </div>
+            <span class="sig-tag">Fresh Hot</span>
+          </div>
+          <div class="signature-item">
+            <div class="sig-left">
+              <div class="sig-icon">🥟</div>
+              <div>
+                <h4>Samosas, Tikki &amp; Bhalla Chaat</h4>
+                <small>Served with homemade chutneys</small>
+              </div>
+            </div>
+            <span class="sig-tag">Evening Hit</span>
+          </div>
+          <div class="signature-item">
+            <div class="sig-left">
+              <div class="sig-icon">🍛</div>
+              <div>
+                <h4>Bhature-Chole &amp; Puri-Chole</h4>
+                <small>Hearty Punjabi classics</small>
+              </div>
+            </div>
+            <span class="sig-tag">Dine-in / Takeaway</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Our Offerings</span>
+        <h2>Freshly Made Every Day</h2>
+        <p>Browse our traditional sweets, savory namkeens, and live chaat &amp; snack counter. Add items to your inquiry list to message an outlet directly on WhatsApp.</p>
+      </div>
+
+      <div class="menu-tabs" role="tablist">
+        <button class="tab-btn active" data-filter="all">All Items</button>
+        <button class="tab-btn" data-filter="sweets">Traditional Sweets</button>
+        <button class="tab-btn" data-filter="chaat">Snacks &amp; Chaat</button>
+        <button class="tab-btn" data-filter="namkeen">Namkeen &amp; Chutneys</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Payments -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Convenient &amp; Welcoming</span>
+        <h2>How We Serve You</h2>
+        <p>Whether you're stopping by for evening chaat with family or picking up festive mithai boxes, we make ordering effortless.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-box">
+          <span class="icon">🍽️</span>
+          <h3>Dine-In</h3>
+          <p>Enjoy hot samosas, chaat, bhature-chole, and fresh jalebi right at our shop.</p>
+        </div>
+        <div class="service-box">
+          <span class="icon">🛍️</span>
+          <h3>In-Store Shopping</h3>
+          <p>Handpick assorted sweets, dry fruit mithai, and namkeen packs for any occasion.</p>
+        </div>
+        <div class="service-box">
+          <span class="icon">🚗</span>
+          <h3>Curbside Pickup</h3>
+          <p>Call ahead to either Mansa outlet and pick up your packed order without waiting.</p>
+        </div>
+        <div class="service-box">
+          <span class="icon">🛵</span>
+          <h3>Home Delivery</h3>
+          <p>Get your favorite sweets and snacks delivered straight to your doorstep in Mansa.</p>
+        </div>
+      </div>
+
+      <div class="payment-bar">
+        <div>
+          <strong style="color: var(--maroon-dark); font-size: 1rem;">Easy &amp; Cashless Payments Accepted</strong>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Fast checkout at both Old Court Road &amp; Chakerian Phatak outlets</div>
+        </div>
+        <div class="payment-badges">
+          <span class="pay-pill">📱 Google Pay / UPI</span>
+          <span class="pay-pill">💳 Debit Cards</span>
+          <span class="pay-pill">💵 Cash</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage Section -->
+  <section id="heritage">
+    <div class="container">
+      <div class="story-box">
+        <div>
+          <span class="section-kicker" style="color: #FCD34D;">Our Legacy</span>
+          <h2>Crafted With Love in Mansa Since 1988</h2>
+          <p>
+            For nearly four decades, Sham's Sweets &amp; Namkeen has been a household name in Mansa for authentic taste, hygienic preparation, and warm hospitality.
+          </p>
+          <p>
+            From wedding bhaji boxes and Diwali hampers to daily morning puri-chole and evening golgappe, our recipes preserve the timeless flavors passed down since day one.
+          </p>
+          <a href="#outlets" class="btn btn-secondary" style="margin-top: 8px;">Call for Bulk &amp; Festive Orders</a>
+        </div>
+        <div class="story-highlights">
+          <div class="story-point">
+            <strong>🎉 Festive &amp; Wedding Boxes</strong>
+            Custom assorted packs of Kaju Katli, Burfi, Milk Cake, and Namkeen.
+          </div>
+          <div class="story-point">
+            <strong>🥣 Signature Homemade Chutneys</strong>
+            Tangy tamarind and fresh mint chutneys crafted in-house for our chaat and snacks.
+          </div>
+          <div class="story-point">
+            <strong>📍 Two Convenient Locations</strong>
+            Serving both Guru Gobind Singh Nagar (Old Court Road) and Chakerian Phatak.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outlets Section -->
+  <section id="outlets">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Visit Us Today</span>
+        <h2>Our Mansa Outlets</h2>
+        <p>Drop in for fresh sweets and hot snacks at either of our two locations in Mansa, Punjab.</p>
+      </div>
+
+      <div class="outlets-grid">
+        <!-- Main Outlet -->
+        <div class="outlet-card">
+          <div>
+            <span class="outlet-label">Main Outlet • Old Court Road</span>
+            <h3>Old Court Road Branch</h3>
+            <div class="outlet-info">
+              <div class="info-row">
+                <span>📍</span>
+                <div><strong>Address:</strong> XCQ5+9WF, Old Court Road, near Mai Nikko Devi School, Guru Gobind Singh Nagar, Mansa, Punjab 151505</div>
+              </div>
+              <div class="info-row">
+                <span>🕒</span>
+                <div><strong>Hours:</strong> Mon – Sun: 9:00 AM – 9:00 PM</div>
+              </div>
+              <div class="info-row">
+                <span>📞</span>
+                <div><strong>Phone:</strong> <a href="tel:+916280285093" style="color: var(--maroon); font-weight: 700;">+91 62802 85093</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="outlet-actions">
+            <a href="tel:+916280285093" class="btn btn-primary">📞 Call Main Outlet</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=XCQ5%2B9WF+Old+Court+Road+Mansa+Punjab+151505" target="_blank" rel="noopener" class="btn btn-outline">🗺️ Directions</a>
+          </div>
+        </div>
+
+        <!-- Second Outlet -->
+        <div class="outlet-card">
+          <div>
+            <span class="outlet-label">Second Outlet • Chakerian Phatak</span>
+            <h3>Chakerian Phatak Branch</h3>
+            <div class="outlet-info">
+              <div class="info-row">
+                <span>📍</span>
+                <div><strong>Address:</strong> Near Phatak, Chakerian, Mansa, Punjab 151505</div>
+              </div>
+              <div class="info-row">
+                <span>🕒</span>
+                <div><strong>Hours:</strong> Mon – Sun: 8:00 AM – 8:30 PM</div>
+              </div>
+              <div class="info-row">
+                <span>📞</span>
+                <div><strong>Phone:</strong> <a href="tel:+919872535803" style="color: var(--maroon); font-weight: 700;">+91 98725 35803</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="outlet-actions">
+            <a href="tel:+919872535803" class="btn btn-primary">📞 Call Chakerian Outlet</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sham's+Sweets+Chakerian+Phatak+Mansa+Punjab+151505" target="_blank" rel="noopener" class="btn btn-outline">🗺️ Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Sham's Sweets &amp; Namkeen</h4>
+        <p>Serving traditional sweets, crisp namkeens, chutneys, and hot Indian chaat in Mansa, Punjab since 1988.</p>
+      </div>
+      <div>
+        <h4>Main Outlet</h4>
+        <p>XCQ5+9WF, Old Court Road,<br>Near Mai Nikko Devi School,<br>Guru Gobind Singh Nagar, Mansa 151505</p>
+        <p style="margin-top: 6px;">📞 +91 62802 85093<br>🕒 Daily: 9:00 AM – 9:00 PM</p>
+      </div>
+      <div>
+        <h4>Second Outlet</h4>
+        <p>Near Phatak, Chakerian,<br>Mansa, Punjab 151505</p>
+        <p style="margin-top: 6px;">📞 +91 98725 35803<br>🕒 Mon–Sun: 8:00 AM – 8:30 PM</p>
+      </div>
+      <div>
+        <h4>Services &amp; Payments</h4>
+        <ul>
+          <li>• Dine-in &amp; In-store Shopping</li>
+          <li>• Curbside Pickup &amp; Delivery</li>
+          <li>• Google Pay (UPI), Debit Cards &amp; Cash</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sham's Sweets &amp; Namkeen, Mansa. All rights reserved.</span>
+      <span>Demo Website • Est. 1988</span>
+    </div>
+  </footer>
+
+  <!-- Order / Inquiry Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop">
+    <div class="drawer" role="dialog" aria-label="Order Inquiry Drawer">
+      <div class="drawer-head">
+        <div>
+          <h3 style="font-size: 1.2rem;">Your Order / Inquiry List</h3>
+          <small style="color: #FDE68A;">Send directly via WhatsApp to our outlet</small>
+        </div>
+        <button class="close-drawer" id="closeDrawerBtn" aria-label="Close">×</button>
+      </div>
+
+      <div class="drawer-body" id="cartItemsContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="drawer-foot">
+        <div class="field">
+          <label for="outletSelect">Choose Outlet</label>
+          <select id="outletSelect">
+            <option value="916280285093">Main Outlet – Old Court Road (+91 62802 85093)</option>
+            <option value="919872535803">Second Outlet – Chakerian Phatak (+91 98725 35803)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="serviceType">Service Type</label>
+          <select id="serviceType">
+            <option value="In-store Pickup">In-store / Curbside Pickup</option>
+            <option value="Home Delivery">Home Delivery</option>
+            <option value="Dine-in">Dine-in</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="customerName">Your Name (Optional)</label>
+          <input type="text" id="customerName" placeholder="e.g., Harpreet Singh" />
+        </div>
+        <button class="btn btn-primary" style="width: 100%;" id="sendWhatsappBtn">
+          💬 Send Order Inquiry on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Added to your inquiry list!</div>
+
+  <script>
+    const menuItems = [
+      // Traditional Sweets
+      {
+        id: "milk-cake",
+        name: "Milk Cake",
+        category: "sweets",
+        categoryLabel: "Traditional Sweet",
+        emoji: "🍮",
+        desc: "Rich, caramelized traditional Punjabi kalakand slow-cooked to perfection."
+      },
+      {
+        id: "burfi",
+        name: "Classic Burfi",
+        category: "sweets",
+        categoryLabel: "Traditional Sweet",
+        emoji: "🟨",
+        desc: "Soft, creamy khoya burfi made fresh daily for celebrations and gifting."
+      },
+      {
+        id: "gulab-jamun",
+        name: "Gulab Jamun",
+        category: "sweets",
+        categoryLabel: "Traditional Sweet",
+        emoji: "🟤",
+        desc: "Warm, melt-in-the-mouth khoya dumplings soaked in fragrant cardamom syrup."
+      },
+      {
+        id: "kaju-katli",
+        name: "Kaju Katli",
+        category: "sweets",
+        categoryLabel: "Traditional Sweet",
+        emoji: "💎",
+        desc: "Delicate diamond-cut cashew fudge topped with edible silver varq."
+      },
+      {
+        id: "jalebi",
+        name: "Crispy Jalebi",
+        category: "sweets",
+        categoryLabel: "Traditional Sweet",
+        emoji: "🥨",
+        desc: "Golden, crunchy spirals dipped in warm saffron-infused sugar syrup."
+      },
+
+      // Snacks & Chaat
+      {
+        id: "samosa",
+        name: "Punjabi Samosa",
+        category: "chaat",
+        categoryLabel: "Snacks & Chaat",
+        emoji: "🥟",
+        desc: "Flaky, golden pastry stuffed with spiced potatoes & peas, served with chutneys."
+      },
+      {
+        id: "golgappe",
+        name: "Golgappe (Pani Puri)",
+        category: "chaat",
+        categoryLabel: "Snacks & Chaat",
+        emoji: "🥣",
+        desc: "Crisp puris filled with spiced potatoes, chickpeas, and chilled tangy-spicy pani."
+      },
+      {
+        id: "bhalla",
+        name: "Dahi Bhalla",
+        category: "chaat",
+        categoryLabel: "Snacks & Chaat",
+        emoji: "🍨",
+        desc: "Soft lentil dumplings drenched in creamy yogurt, sweet & mint chutneys, and spices."
+      },
+      {
+        id: "tikki",
+        name: "Aloo Tikki Chaat",
+        category: "chaat",
+        categoryLabel: "Snacks & Chaat",
+        emoji: "🥘",
+        desc: "Crisp tawa-fried potato patties topped with chole, curd, and zesty chutneys."
+      },
+      {
+        id: "bhature-chole",
+        name: "Bhature-Chole",
+        category: "chaat",
+        categoryLabel: "Snacks & Chaat",
+        emoji: "🍛",
+        desc: "Fluffy golden bhature paired with rich, aromatic Amritsari-style chole & pickle."
+      },
+      {
+        id: "puri-chole",
+        name: "Puri-Chole",
+        category: "chaat",
+        categoryLabel: "Snacks & Chaat",
+        emoji: "🍽️",
+        desc: "Hot puffed puris served with flavorful spiced chickpea curry—a Mansa favorite."
+      },
+
+      // Namkeen & Chutneys
+      {
+        id: "namkeen",
+        name: "Assorted Namkeens",
+        category: "namkeen",
+        categoryLabel: "Namkeen & Chutneys",
+        emoji: "🥨",
+        desc: "Crispy bhujia, mathri, and savory tea-time mixes packed fresh for home."
+      },
+      {
+        id: "chutneys",
+        name: "Signature Chutneys",
+        category: "namkeen",
+        categoryLabel: "Namkeen & Chutneys",
+        emoji: "🫙",
+        desc: "Our famous sweet tamarind and spicy green mint chutneys prepared in-house."
+      }
+    ];
+
+    const menuGrid = document.getElementById("menuGrid");
+    const tabBtns = document.querySelectorAll(".tab-btn");
+    const cartCountEl = document.getElementById("cartCount");
+    const drawerBackdrop = document.getElementById("drawerBackdrop");
+    const cartItemsContainer = document.getElementById("cartItemsContainer");
+    const toastEl = document.getElementById("toast");
+
+    let cart = {}; // { id: { item, qty } }
+
+    function renderMenu(filter = "all") {
+      const filtered = filter === "all"
+        ? menuItems
+        : menuItems.filter(item => item.category === filter);
+
+      menuGrid.innerHTML = filtered.map(item => `
+        <article class="menu-card">
+          <div>
+            <div class="menu-card-top">
+              <span class="menu-emoji">${item.emoji}</span>
+              <span class="cat-badge">${item.categoryLabel}</span>
+            </div>
+            <h3>${item.name}</h3>
+            <p>${item.desc}</p>
+          </div>
+          <div class="menu-card-footer">
+            <span class="veg-dot"><span class="veg-square"></span> Pure Veg</span>
+            <button class="add-btn" onclick="addToCart('${item.id}')">+ Add to List</button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      setTimeout(() => toastEl.classList.remove("show"), 2000);
+    }
+
+    window.addToCart = function(id) {
+      const item = menuItems.find(m => m.id === id);
+      if (!item) return;
+      if (cart[id]) {
+        cart[id].qty += 1;
+      } else {
+        cart[id] = { item, qty: 1 };
+      }
+      updateCartUI();
+      showToast(`Added ${item.name} to inquiry list`);
+    };
+
+    window.changeQty = function(id, delta) {
+      if (!cart[id]) return;
+      cart[id].qty += delta;
+      if (cart[id].qty <= 0) {
+        delete cart[id];
+      }
+      updateCartUI();
+    };
+
+    function updateCartUI() {
+      const entries = Object.values(cart);
+      const totalQty = entries.reduce((sum, e) => sum + e.qty, 0);
+      cartCountEl.textContent = totalQty;
+
+      if (entries.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div style="text-align:center; padding: 40px 10px; color: var(--text-muted);">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">🛍️</div>
+            <p><strong>Your inquiry list is empty</strong></p>
+            <p style="font-size: 0.88rem; margin-top: 6px;">Add sweets, namkeen, or chaat items from the menu to send an order or availability request.</p>
+          </div>
+        `;
+        return;
+      }
+
+      cartItemsContainer.innerHTML = entries.map(({ item, qty }) => `
+        <div class="cart-item">
+          <div>
+            <strong style="color: var(--maroon-dark);">${item.emoji} ${item.name}</strong>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">${item.categoryLabel}</div>
+          </div>
+          <div class="qty-controls">
+            <button class="qty-btn" onclick="changeQty('${item.id}', -1)">-</button>
+            <strong style="min-width: 18px; text-align:center;">${qty}</strong>
+            <button class="qty-btn" onclick="changeQty('${item.id}', 1)">+</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    // Filter tabs
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderMenu(btn.dataset.filter);
+      });
+    });
+
+    // Drawer open/close
+    document.getElementById("openDrawerBtn").addEventListener("click", () => {
+      drawerBackdrop.classList.add("open");
+    });
+
+    document.getElementById("closeDrawerBtn").addEventListener("click", () => {
+      drawerBackdrop.classList.remove("open");
+    });
+
+    drawerBackdrop.addEventListener("click", (e) => {
+      if (e.target === drawerBackdrop) drawerBackdrop.classList.remove("open");
+    });
+
+    // Mobile Nav
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    menuToggle.addEventListener("click", () => mainNav.classList.toggle("open"));
+    mainNav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => mainNav.classList.remove("open"));
+    });
+
+    // WhatsApp Order Builder
+    document.getElementById("sendWhatsappBtn").addEventListener("click", () => {
+      const entries = Object.values(cart);
+      const phone = document.getElementById("outletSelect").value;
+      const service = document.getElementById("serviceType").value;
+      const name = document.getElementById("customerName").value.trim();
+
+      let message = `Namaste Sham's Sweets & Namkeen!%0A`;
+      if (name) message += `Name: ${encodeURIComponent(name)}%0A`;
+      message += `Service: ${encodeURIComponent(service)}%0A%0A`;
+
+      if (entries.length > 0) {
+        message += `*Items Requested:*%0A`;
+        entries.forEach(({ item, qty }) => {
+          message += `• ${encodeURIComponent(item.name)} (Qty/Portion: ${qty})%0A`;
+        });
+      } else {
+        message += `I would like to inquire about today's fresh sweets & snacks.%0A`;
+      }
+
+      message += `%0APlease share availability & total price.`;
+      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    });
+
+    // Init
+    renderMenu("all");
+    updateCartUI();
+  </script>
+</body>
+</html>
